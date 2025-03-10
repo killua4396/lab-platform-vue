@@ -1,0 +1,23 @@
+{
+  "id": "4480649",
+  "name": "实验室平台",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6241660",
+      "name": "后台总览",
+      "font_class": "houtaizonglan",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "5318192",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}
