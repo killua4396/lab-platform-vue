@@ -12,10 +12,11 @@
                 </el-tree>
             </el-aside>
             <el-main>
-                <el-row>
+                <el-row style="margin-bottom: 20px;">
                     <el-col :span="8">
                         <div class="block-desc">
-                            <i class="iconfont icon-tongji"></i>项目统计
+                            <i class="iconfont icon-tongji"></i>
+                            <span>项目统计</span>
                         </div>
                         <div>
                             <el-descriptions :column="1" border >
@@ -30,25 +31,60 @@
                             </el-descriptions>
                         </div>
                     </el-col>
-                    <el-col :span="16">
+                    <el-col :span="15" :offset="1">
                         <div class="block-desc">
                             <i class="iconfont icon-houtaizonglan"></i>
-                            项目总览
+                            <span>项目总览</span>
+                        </div>
+                        <div class="project-overview">
+                            <el-row :gutter="50" class="overview-row">
+                                <el-col :span="8" class="overview-row-col">
+                                    <projectOverviewLabel icon-class="iconfont icon-file-text-fill" label="项目总数" count="8" color="#cd1b31"></projectOverviewLabel>
+                                </el-col>
+                                <el-col :span="8" class="overview-row-col">
+                                    <projectOverviewLabel icon-class="iconfont icon-shebei" label="设备总数" count="23" color="#288cfc"></projectOverviewLabel>
+                                </el-col>
+                                <el-col :span="8" class="overview-row-col">
+                                    <projectOverviewLabel icon-class="iconfont icon-charging-pile-fill" label="充电总数" count="8" color="#fcc024"></projectOverviewLabel>
+                                </el-col>
+                            </el-row>
+                            <el-row :gutter="50"  class="overview-row">
+                                <el-col :span="8" class="overview-row-col">
+                                    <projectOverviewLabel icon-class="iconfont icon-quanxianyuechi" label="激活设备" count="8" color="#288cfc"></projectOverviewLabel>
+                                </el-col>
+                                <el-col :span="8" class="overview-row-col">
+                                    <projectOverviewLabel icon-class="iconfont icon-leida" label="在线设备" count="8" color="#fcc024"></projectOverviewLabel>
+                                </el-col>
+                                <el-col :span="8" class="overview-row-col">
+                                    <projectOverviewLabel icon-class="iconfont icon-baojingshu" label="报警数量" count="8" color="#f15e0e"></projectOverviewLabel>
+                                </el-col>
+                            </el-row>
                         </div>
                     </el-col>
                 </el-row>
+                <MapPreview style="margin-bottom: 20px;"></MapPreview>
+                <ListPreview style="margin-bottom: 20px;"></ListPreview>
             </el-main>
         </el-container>
     </div>
 </template>
 
 <script>
+import projectOverviewLabel from '@/components/ProjectOverviewLabel/project-overview-label-index.vue';
+import MapPreview from '@/components/MapPreview/map-preview-index.vue';
+import ListPreview from '@/components/ListPreview/list-preview-index.vue';
+
 export default {
     name: 'HomePage',
+    components: {
+        projectOverviewLabel,
+        MapPreview,
+        ListPreview
+    },
     data(){
         return {
-            labelStyle: "background:#f4f4f4;font-weight:bold;color:#555555;border: 1px solid #dddddd",
-            contentStyle: "border: 1px solid #dddddd",
+            labelStyle: "background:#f4f4f4;font-weight:bold;color:#555555;border: 1px solid #dddddd;text-align:center",
+            contentStyle: "border: 1px solid #dddddd;text-align:center",
             bmsOptions: [{
                 id: 0,
                 label: '全选',
@@ -83,9 +119,6 @@ export default {
             }]
         }
     },
-    methods: {
-
-    }
 }
 </script>
 
@@ -113,8 +146,24 @@ export default {
 .block-desc{
     color : #555555;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 .block-desc i{
     color :#02a7f0;
+    font-size: 20px;
+}
+.project-overview{
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-right: 20px;
+    height: 326px;
+}
+.overview-row{
+    height: 50%;
+}
+.overview-row-col{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 </style>

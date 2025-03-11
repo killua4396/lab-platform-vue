@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1727376",
+      "name": "32权限、钥匙",
+      "font_class": "quanxianyuechi",
+      "unicode": "e8a3",
+      "unicode_decimal": 59555
+    },
+    {
+      "icon_id": "8039244",
+      "name": "报警数",
+      "font_class": "baojingshu",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "8039332",
+      "name": "设备",
+      "font_class": "shebei",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "12040755",
+      "name": "雷达",
+      "font_class": "leida",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "42198914",
+      "name": "file-text-fill",
+      "font_class": "file-text-fill",
+      "unicode": "e792",
+      "unicode_decimal": 59282
+    },
+    {
+      "icon_id": "42232080",
+      "name": "charging-pile-fill",
+      "font_class": "charging-pile-fill",
+      "unicode": "e83c",
+      "unicode_decimal": 59452
+    },
+    {
       "icon_id": "6241660",
       "name": "后台总览",
       "font_class": "houtaizonglan",
